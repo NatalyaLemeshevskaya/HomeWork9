@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animation View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AnimationViewController" customModule="HomeWork9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOk-a6-HfS" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="87" y="150" width="240" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdV-cZ-fbI">
+                                        <rect key="frame" x="63" y="70" width="114.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.96254659549999999" green="1" blue="0.95805065820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2169688337" green="0.41332499779999998" blue="0.46526015230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="VdV-cZ-fbI" firstAttribute="centerX" secondItem="uOk-a6-HfS" secondAttribute="centerX" id="dfa-7p-j9G"/>
+                                    <constraint firstAttribute="width" constant="240" id="e4S-4T-u0c"/>
+                                    <constraint firstAttribute="height" constant="160" id="hTB-P7-KXG"/>
+                                    <constraint firstItem="VdV-cZ-fbI" firstAttribute="centerY" secondItem="uOk-a6-HfS" secondAttribute="centerY" id="uLg-Nl-x7c"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QP5-Rp-lJ2">
+                                <rect key="frame" x="20" y="718" width="374" height="60"/>
+                                <color key="backgroundColor" red="0.2169688337" green="0.41332499779999998" blue="0.46526015230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="UJN-c2-jhw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="19"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.96254659549999999" green="1" blue="0.95805065820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5C-zH-7I5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89866381650000005" green="1" blue="0.8495446982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QP5-Rp-lJ2" secondAttribute="bottom" constant="84" id="4dx-N8-t8h"/>
+                            <constraint firstItem="uOk-a6-HfS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="C3h-du-Tfd"/>
+                            <constraint firstItem="QP5-Rp-lJ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="StM-ig-9sn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QP5-Rp-lJ2" secondAttribute="trailing" constant="20" id="WQK-H5-1oH"/>
+                            <constraint firstItem="uOk-a6-HfS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bCl-ry-CNE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="uOk-a6-HfS" id="1uc-Ty-kNY"/>
+                        <outlet property="goButton" destination="QP5-Rp-lJ2" id="kjx-Rh-nkD"/>
+                        <outlet property="textForAnimation" destination="VdV-cZ-fbI" id="Grx-fQ-xFc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="114"/>
+        </scene>
+    </scenes>
+</document>
